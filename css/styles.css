@@ -1,0 +1,244 @@
+/*
+Dark Gray#2b2b2b
+Blue Color that I'm not fond of. #0000ff
+#F0FFFF;
+
+flex-start: Items align to the left side of the container.
+flex-end: Items align to the right side of the container.
+center: Items align at the center of the container.
+space-between: Items display with equal spacing between them.
+space-around: Items display with equal spacing around them.
+*/
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --black: #000000;
+  --bg-color: #F0FFFF;
+  --white-color: #FFFFFF;
+  --button-bg:  #357b70;
+  --pink: #FFC0CB;
+  --grid-bg:# D3D3D3;
+  --keyframe-fill: #edc655;
+  --keyframe-fill-2: #f76414;
+  --body-font: 1.5em;
+  --body-font-family:'Roboto', sans-serif;
+}
+
+body{
+    font-family: var(--body-font-family);
+    font-size: var(--body-font);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    
+}
+
+a {
+    color: var(--primary-color);
+  }
+  
+  
+  a:visited {
+    /* visited link */
+    color: var(--black);
+  }
+  
+  a:hover, a:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+  }
+
+
+  a:active {
+    /* selected link */
+    color: var(--secondary-color);
+  }
+
+  button,.button {
+    
+    font-family: inherit;
+    background-color: --button-bg;
+    color: var(--white-color);
+    text-decoration: none;
+    /*adds spacing to the button (this will be discussed more in-depth later) */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid var(--black);
+
+  }
+
+  button:hover, button:focus, .button:hover,
+  .button:focus{
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+  }
+
+  .button, button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the button */
+    background-color: var(--button-bg);
+    color:var(--white-color);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+    border-bottom: 2px solid var(--black);
+    transition-duration: 0.2s;
+    transition-property: opacity;
+  }
+
+  .button__secondary {
+    background-color: var(--secondary-color);
+    color: var(--black);
+  }
+
+  .profile__portrait{
+     float: left;
+     width: 250px;
+     height: auto;
+     margin-right: 40px;
+     border-radius: 50%;
+     border: solid var(--pink) 1px;
+  }
+
+  .page-footer{
+    clear:both;
+    display:flex;
+    flex-direction: column;
+    text-align: center; 
+  }
+
+  .social-media img{
+    width:5%;
+  }
+  .profile {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;   
+    justify-content: center;
+  }
+
+  .page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid;
+  }
+
+  .page-header__item {
+    flex: 0 1 200px;
+  }
+.page-header img{
+  width: 2%;
+}
+  .page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+    
+  }
+
+  .navigation-list, li {
+    list-style-type: none;
+  }
+
+  .navigation-list li{
+    display: inline-block;
+    margin-left: 15px;
+  }
+  
+  .grid__item {
+    display: inline-block;
+    width: 33%;
+  }
+  
+  /* Styling CSS grid*/
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  .grid__item {
+    background-color: var(--grid-bg);
+    padding: 10px;
+    /* Set width to auto*/
+    width: auto;
+  }
+
+
+  
+ @media all and (max-width: 750px){
+
+  @media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+  }
+}
+
+@keyframes color-change {
+  from {
+    fill: var(--keyframe-fill);
+  }
+  to {
+    fill: --keyframe-fill-2;
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+  .cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+  }
