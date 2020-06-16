@@ -26,10 +26,10 @@ space-around: Items display with equal spacing around them.
   --secondary-color: #e0b354;
   --black: #000000;
   --bg-color: #F0FFFF;
-  --white-color: #FFFFFF;
+  --white-color: #fff;
   --button-bg:  #357b70;
-  --pink: #FFC0CB;
-  --grid-bg:# D3D3D3;
+  --pink: #ffc0cb;
+  --grid-bg: #d3d3d3;
   --keyframe-fill: #edc655;
   --keyframe-fill-2: #f76414;
   --body-font: 1.5em;
