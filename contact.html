@@ -3,7 +3,7 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="shortcut icon" href="/static/favicon/wikipedia.ico">
+      <link rel="shortcut icon" href="img/favicon.ico">
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
@@ -13,7 +13,11 @@
     <body>
 <header class="page-header">
   <!--Will replace tag below with my logo image.-->
-   <img src="img/palmtreelogo.png" alt=" A black and white palm tree logo." class="page-header__item">
+  <img
+  src="img/tflogo.png"
+  alt=" A black and white logo for Tesalon Felicien."
+  class="page-header__item"
+/>
    <nav class="main-navigation page-header__item">
       <ul role="menubar" class="navigation-list">
         <li role="presentation">
@@ -33,20 +37,21 @@
 </header>
 <main class="profile">
 <h1>Contact</h1>
-        Tel: <a href="tel:+2253023725">225-302-3725</a>
-        Email: <a href="mailto:felicien.tesalon@gmail.com">Felicien.tesalon@gmail.com</a>
-        <a href="mailto:felicien.tesalon@gmail.com">Contact me</a>
-
-    <form action="" method="post" id="contact-form">
+<p>Tesalon Felicien</p>
+<p>Atlanta, GA</p>
+Tel: <a href="tel:+2253023725">225-302-3725</a> <br>
+Email: <a href="mailto:felicien.tesalon@gmail.com">Felicien.tesalon@gmail.com</a>
    
-        <label class="standard-label" for="contact-email">Email: </label>
+     <form method="post" id="contact-form">
+   
+        <label class="standard-label" for="contact-email">Email: </label> <br>
         <input type="email" id="contact-email" required>
+        <label class="standard-label"> <br>
+        Telephone: </label> <br>
+        <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br> 
       
-        <label class="standard-label">Telephone: </label>
-        <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
-      
-        <label class="standard-label">Message: </label>
-        <textarea maxlength="240" required ></textarea>
+        <label class="standard-label">Message: </label> <br>
+        <textarea maxlength="240" required ></textarea> <br>
       
         <input type="submit" value="Send message">
       

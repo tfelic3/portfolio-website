@@ -17,295 +17,313 @@ space-between: Items display with equal spacing between them.
 space-around: Items display with equal spacing around them.
 */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :root {
-  --primary-color: #357b70;
-  --secondary-color: #e0b354;
-  --black: #000000;
-  --bg-color: #F0FFFF;
-  --white-color: #fff;
-  --button-bg:  #357b70;
-  --pink: #ffc0cb;
-  --grid-bg: #d3d3d3;
-  --keyframe-fill: #edc655;
-  --keyframe-fill-2: #f76414;
-  --body-font: 1.5em;
-  --body-font-family:'Roboto', sans-serif;
+	--primary-color: #357b70;
+	--secondary-color: #e0b354;
+	--black: #000000;
+	--bg-color: #f0ffff;
+	--font-color: #474747;
+	--white-color: #fff;
+	--button-bg: #357b70;
+	--pink: #ffc0cb;
+	--grid-bg: #d3d3d3;
+	--keyframe-fill: #edc655;
+	--keyframe-fill-2: #f76414;
+	--third-color: #20ffe3;
+	--body-font: 1.5em;
+	--body-font-family: 'Roboto', sans-serif;
 }
 
-body{
-    font-family: var(--body-font-family);
-    font-size: var(--body-font);
-    line-height: 1.6;
-    background-color: var(--bg-color);
-    
+body {
+	font-family: var(--body-font-family);
+	font-size: var(--body-font);
+	line-height: 1.6;
+	color: var(--font-color);
+	background-color: var(--bg-color);
 }
 
-a {
-    color: var(--primary-color);
-  }
-  
-  
-  a:visited {
-    /* visited link */
-    color: var(--black);
-  }
-  
-  a:hover, a:focus {
-    /* No underlining when hovering over a link */
-    text-decoration: none;
-  }
-
-
-  a:active {
-    /* selected link */
-    color: var(--secondary-color);
-  }
-
-  button,.button {
-    
-    font-family: inherit;
-    background-color: --button-bg;
-    color: var(--white-color);
-    text-decoration: none;
-    /*adds spacing to the button (this will be discussed more in-depth later) */
-    padding: 10px;
-    border-radius: 3px;
-    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-    border-bottom: 2px solid var(--black);
-
-  }
-
-  button:hover, button:focus, .button:hover,
-  .button:focus{
-    /* lets the mouse appear as a hand when hovering over the button */
-    cursor: pointer;
-    /* reduces the opacity of the button to 80% */
-    opacity: 0.8;
-  }
-
-  .button, button {
-    /* overwrites browser defaults and resets the border */
-    border: none;
-    display: inline-block;
-    /* takes the font from the outer container */
-    font-family: inherit;
-    /* styles the button */
-    background-color: var(--button-bg);
-    color:var(--white-color);
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    /* width of the border, type, color */
-    border-bottom: 2px solid var(--black);
-    -webkit-transition-duration: 0.2s;
-         -o-transition-duration: 0.2s;
-            transition-duration: 0.2s;
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
-    transition-property: opacity;
-  }
-
-  .button__secondary {
-    background-color: var(--secondary-color);
-    color: var(--black);
-  }
-
-  .profile__portrait{
-     float: left;
-     width: 250px;
-     height: auto;
-     margin-right: 40px;
-     border-radius: 50%;
-     border: solid var(--pink) 1px;
-  }
-
-  .page-footer{
-    clear:both;
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center; 
-  }
-
-  .social-media img{
-    width:5%;
-  }
-  .profile {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;   
-    -webkit-box-pack: center;   
-        -ms-flex-pack: center;   
-            justify-content: center;
-  }
-
-  .page-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    padding: 20px;
-    border-bottom: 1px solid;
-  }
-
-  .page-header__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 200px;
-            flex: 0 1 200px;
-  }
-.page-header img{
-  width: 2%;
+a:visited {
+	/* visited link */
+	color: var(--font-color);
 }
-  .page-header__item:last-child {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    text-align: right;
-    
-  }
 
-  .navigation-list, li {
-    list-style-type: none;
-  }
+a:hover,
+a:focus {
+	/* No underlining when hovering over a link */
+	color: var(--keyframe-fill-2);
+}
 
-  .navigation-list li{
-    display: inline-block;
-    margin-left: 15px;
-  }
-  
-  .grid__item {
-    display: inline-block;
-    width: 33%;
-  }
-  
-  /* Styling CSS grid*/
-  
-  .grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-  }
-  
-  .grid__item {
-    background-color: var(--grid-bg);
-    padding: 10px;
-    /* Set width to auto*/
-    width: auto;
-  }
+a:active {
+	/* selected link */
+	color: var(--secondary-color);
+}
 
+button,
+.button {
+	font-family: inherit;
+	background-color: var(--pink);
+	color: var(--white-color);
+	text-decoration: none;
+	/*adds spacing to the button (this will be discussed more in-depth later) */
+	padding: 10px;
+	border-radius: 3px;
+	/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+	border-bottom: 2px solid var(--black);
+}
 
-  
- @media all and (max-width: 750px){
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+	/* lets the mouse appear as a hand when hovering over the button */
+	cursor: pointer;
+	/* reduces the opacity of the button to 80% */
+	opacity: 0.8;
+}
 
-  @media all and (max-width: 500px) {
-    .grid {
-      -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-    }
-  }
-  @media all and (min-width: 500px) and (max-width: 750px){
-    .grid {
-      -ms-grid-columns: 1fr 20px 1fr;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  @media all and (max-width: 750px) {
-    .grid {
-      grid-gap: 10px;
-    }
-    .grid__item:last-child {
-      grid-column: auto / auto;
-      grid-row: auto / auto;
-    }
-    h1 {
-      font-size: 22px;
-    }
-  }
+.button,
+button {
+	/* overwrites browser defaults and resets the border */
+	border: none;
+	display: inline-block;
+	/* takes the font from the outer container */
+	font-family: inherit;
+	/* styles the button */
+	background-color: var(--pink);
+	color: var(--white-color);
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 3px;
+	/* width of the border, type, color */
+	border-bottom: 2px solid var(--black);
+	-webkit-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;
+}
+
+.button__secondary {
+	background-color: var(--third-color);
+	color: var(--black);
+}
+
+.profile__portrait {
+	float: left;
+	width: 250px;
+	height: auto;
+	margin-right: 0.5em;
+	border-radius: 50%;
+	border: solid var(--pink) 1px;
+}
+
+main h1 {
+	color: var(--pink);
+	text-align: center;
+}
+.page-footer {
+	clear: both;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	text-align: center;
+	font-size: 1em;
+}
+
+.social-media img {
+	width: 4%;
+}
+.profile {
+	max-width: 700px;
+	text-align: center;
+	margin: 0 auto;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+}
+
+.page-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	padding: 5px;
+	border-bottom: 1px solid;
+}
+
+.page-header__item {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 200px;
+	flex: 0 1 200px;
+}
+.page-header img {
+	max-width: 50%;
+	height: auto;
+}
+.page-header__item:last-child {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	text-align: right;
+}
+
+.navigation-list li {
+	display: inline-block;
+	margin-left: 15px;
+	text-decoration: none;
+	margin-top: 1.5em;
+}
+
+li a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+.grid__item {
+	display: inline-block;
+	width: 33%;
+}
+
+/* Styling CSS grid*/
+
+.grid {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+}
+
+.grid__item {
+	background-color: var(--grid-bg);
+	padding: 10px;
+	/* Set width to auto*/
+	width: auto;
+}
+
+/*media queries*/
+
+@media all and (max-width: 750px) {
+	@media all and (max-width: 650px) {
+		.grid {
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+		}
+		.navigation-list li {
+			display: block;
+			margin: 0;
+		}
+		.profile__portrait {
+			float: none;
+		}
+		.social-media img {
+			width: 4%;
+			height: auto;
+		}
+	}
+	@media all and (min-width: 500px) and (max-width: 750px) {
+		.grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	@media all and (max-width: 750px) {
+		.grid {
+			grid-gap: 10px;
+		}
+		.grid__item:last-child {
+			grid-column: auto / auto;
+			grid-row: auto / auto;
+		}
+		h1 {
+			font-size: 22px;
+		}
+	}
 }
 
 @-webkit-keyframes color-change {
-  from {
-    fill: var(--keyframe-fill);
-  }
-  to {
-    fill: --keyframe-fill-2;
-  }
+	from {
+		fill: var(--keyframe-fill);
+	}
+	to {
+		fill: --keyframe-fill-2;
+	}
 }
 
 @keyframes color-change {
-  from {
-    fill: var(--keyframe-fill);
-  }
-  to {
-    fill: --keyframe-fill-2;
-  }
+	from {
+		fill: var(--keyframe-fill);
+	}
+	to {
+		fill: --keyframe-fill-2;
+	}
 }
 
 .sun {
-  -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
+	-webkit-animation: 4s color-change infinite alternate linear;
+	animation: 4s color-change infinite alternate linear;
 }
 
 .cloud-front {
-  -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
+	-webkit-animation: 30s cloud-move infinite alternate linear;
+	animation: 30s cloud-move infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
-  }
+	from {
+		-webkit-transform: translate(0, 50px);
+		transform: translate(0, 50px);
+	}
+	to {
+		-webkit-transform: translate(200px, 50px);
+		transform: translate(200px, 50px);
+	}
 }
 
 @keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
-  }
+	from {
+		-webkit-transform: translate(0, 50px);
+		transform: translate(0, 50px);
+	}
+	to {
+		-webkit-transform: translate(200px, 50px);
+		transform: translate(200px, 50px);
+	}
 }
 
 @-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
-  }
+	from {
+		-webkit-transform: translate(446px, 48px);
+		transform: translate(446px, 48px);
+	}
+	to {
+		-webkit-transform: translate(100px, 48px);
+		transform: translate(100px, 48px);
+	}
 }
 
 @keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
-  }
+	from {
+		-webkit-transform: translate(446px, 48px);
+		transform: translate(446px, 48px);
+	}
+	to {
+		-webkit-transform: translate(100px, 48px);
+		transform: translate(100px, 48px);
+	}
 }
 
-  .cloud-back {
-    -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-            animation: 34s cloud-move-reverse infinite alternate linear;
-  }
+.cloud-back {
+	-webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+	animation: 34s cloud-move-reverse infinite alternate linear;
+}
