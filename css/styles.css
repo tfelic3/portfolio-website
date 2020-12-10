@@ -43,7 +43,7 @@ a {
   
   a:visited {
     /* visited link */
-    color: var(--black);
+    color: var(--primary-color);
   }
   
   a:hover, a:focus {
