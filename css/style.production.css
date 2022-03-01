@@ -192,7 +192,7 @@ li {
 
 .grid__item {
 	display: inline-block;
-	width: 33%;
+	width: 20%;
 }
 
 /* Styling CSS grid*/
@@ -207,18 +207,17 @@ li {
 
 .grid__item {
 	background-color: var(--grid-bg);
-	padding: 10px;
 	/* Set width to auto*/
 	width: auto;
 }
 
 /*media queries*/
 
-@media all and (max-width: 750px) {
-	@media all and (max-width: 650px) {
+@media all and (max-width: 1500px) {
+	@media all and (min-width: 1000px) {
 		.grid {
 			-ms-grid-columns: 1fr;
-			grid-template-columns: 1fr;
+			grid-template-columns: 1fr 1fr ;
 		}
 		.navigation-list li {
 			display: block;
@@ -234,7 +233,7 @@ li {
 	}
 	@media all and (min-width: 500px) and (max-width: 750px) {
 		.grid {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr;
 		}
 	}
 	@media all and (max-width: 750px) {
